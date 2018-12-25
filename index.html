@@ -9,6 +9,15 @@
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="script.js" defer></script>
     <title>Знайди друга</title>
 </head>
 
@@ -110,8 +119,9 @@
                 </svg>
                 <h1>Знайди друга</h1>
             </div>
-            <svg class="icon-menu"><use xlink:href="#icon-menu"></use></svg>
-            
+            <svg class="icon-menu">
+                <use xlink:href="#icon-menu"></use>
+            </svg>
             <nav class="nav-wrapper d-flex">
                 <a href="#" class="nav-link">Все про усиновлення</a>
 
@@ -126,7 +136,7 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main class="main-content">
         <section class="banner">
             <div class="wrapper d-flex">
                 <div class="banner-item">
@@ -145,6 +155,9 @@
                         <input type="search" placeholder="В регіоні..." class="form-input">
                         <button class="btn-accent">Знайти</button>
                     </form>
+                    <div id="container" class="row">
+                        
+                    </div>
                 </div>
             </div>
         </section>
@@ -160,7 +173,8 @@
                         </svg>
                         <h4 class="col-heading">Шукай</h4>
                         <p class="col-content">
-                            Легко знайти собаку чи кота, яка підходить вам у притулку або групі порятунку. Просто введіть свій поштовий індекс вище,
+                            Легко знайти собаку чи кота, яка підходить вам у притулку або групі порятунку. Просто
+                            введіть свій поштовий індекс вище,
                             щоб
                             <a href="#">почати пошук.</a>
                         </p>
@@ -171,8 +185,10 @@
                         </svg>
                         <h4 class="col-heading">Знайомся</h4>
                         <p class="col-content">
-                            Коли ви знайдете те що шукали, натисніть "дізнатись більше про мене", щоб отримати контактну інформацію притулку або служби
-                            порятунку. Зв'яжіться з ними, щоб дізнатись більше про те, як зустрітися та прийняти домашнього
+                            Коли ви знайдете те що шукали, натисніть "дізнатись більше про мене", щоб отримати
+                            контактну інформацію притулку або служби
+                            порятунку. Зв'яжіться з ними, щоб дізнатись більше про те, як зустрітися та прийняти
+                            домашнього
                             улюбленця.
                         </p>
                     </div>
@@ -182,14 +198,113 @@
                         </svg>
                         <h4 class="col-heading">Забирай друга додому</h4>
                         <p class="col-content">
-                            Притулок допоможе вам пройти процес прийняття. Підготуйте свій будинок для прибуття вашої собаки або кота, щоб допомогти
+                            Притулок допоможе вам пройти процес прийняття. Підготуйте свій будинок для прибуття вашої
+                            собаки або кота, щоб допомогти
                             їм пристосуватися до своєї нової родини.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Pets -->
+        <section id="pets">
+            <div class="wrapper">
+                <h3 class="section-heading">Пошук тварин</h3>
+                <form class="search-form">
+                    <input type="search" placeholder="Я шукаю..." class="form-input">
+                    <input type="search" placeholder="В регіоні..." class="form-input">
+                    <button class="btn-accent">Знайти</button>
+                </form>
+                <div class="row">
+                    <figure class="profile">
+                        <img src="images/img_4.jpg" alt="cat" class="profile-img">
+                        <figcaption class="profile-caption">
+                            <h4 class="profile-heading">Том</h4>
+                            <p class="profile-txt">
+                                Знайомтесь Том, 3-річний чудовий котик. Він грайливий, життєрадісний і дружелюбний до
+                                оточуючих. Він обожнює бути в центрі уваги і любить бути домашнім улюбленцем.
+                                Він також любить гратись та прогулянки на свіжому повітрі..
+                            </p>
+                            <button class="profile-btn">Детальніше</button>
+                        </figcaption>
+                    </figure>
+                    <figure class="profile">
+                        <img src="images/img_7.jpg" alt="cat" class="profile-img">
+                        <figcaption class="profile-caption">
+                            <h4 class="profile-heading">Рікі</h4>
+                            <p class="profile-txt">
+                                Любить іграшки та людей! Вона є надзвичайною собакою,
+                                яка хоче порадувати, і ми не розуміємо, чому ще її не усиновили. Їй потрібно і хочеться
+                                бути частиною сім'ї! Якщо ви зацікавлені в Ельзі, будь ласка,
+                                зателефонуйте або відвідайте притулок...
+                            </p>
+                            <button class="profile-btn">Детальніше</button>
+                        </figcaption>
+                    </figure>
+                    <figure class="profile">
+                        <img src="images/img_3.jpg" alt="cat" class="profile-img">
+                        <figcaption class="profile-caption">
+                            <h4 class="profile-heading">Барсік</h4>
+                            <p class="profile-txt">
+                                Барсіку 8 місяців. Він веселий та невгамовний малюк.
+                                Він дійсно гіперактивний, але зчасом він виросте з цього. Він любить увагу і їжу,
+                                він не агресивний взагалі і гарно ладнає з іншими тваринами.
+                            </p>
+                            <button class="profile-btn">Детальніше</button>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <!-- New profile -->
+        <section id="new-profile">
+            <div class="wrapper">
+                <h3 class="section-heading">Нове оголошення</h3>
+                <form class="new-profile-form">
+                    <fieldset>
+                        <legend>Тваринка</legend>
+                        <input type="text" placeholder="Ім'я" class="new-profile-input" name="name">
+                        <input type="text" placeholder="Порода" class="new-profile-input" name="breed">
+                        <input type="number" placeholder="Вік" class="new-profile-input" name="age">
+                        <input type="file" accept="image/*" name="img" class="new-profile-input">
+                        <div class="input-wrapper">
+                            <div class="radio-wrapper">
+                                <label class="new-profile-radio">Дівчика
+                                    <input type="radio" name="gender" value="female">
+                                </label>
+                                <label class="new-profile-radio">Хлопчик
+                                    <input type="radio" name="gender" value="male">
+                                </label>
+                            </div>
+                            <div class="radio-wrapper">
+                                <label class="new-profile-radio">Котик
+                                    <input type="radio" name="type" value="сat">
+                                </label>
+                                <label class="new-profile-radio">Песик
+                                    <input type="radio" name="type" value="dog">
+                                </label>
+                            </div>
+                        </div>
+                        <textarea name="description" placeholder="Напишіть кородкий опис тваринки та її історію" rows="10"
+                            class="new-profile-input new-profile-textarea"></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Контактна особа</legend>
+                        <input type="text" placeholder="Ім'я" class="new-profile-input" name="petOwnerName">
+                        <input type="tel" class="new-profile-input" name="phone" placeholder="+(380)xx-xx-xx-xxx">
+                        <input type="text" list="city" class="new-profile-input" placeholder="Місто" name="city">
+                        <datalist id="city">
+                            <option value="Львів"></option>
+                            <option value="Одеса"></option>
+                        </datalist>
+                    </fieldset>
+                    <button class="btn-accent">Надіслати</button>
+                </form>
+            </div>
+
+        </section>
     </main>
+
 </body>
 
 </html>
